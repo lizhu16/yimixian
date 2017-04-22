@@ -15,10 +15,10 @@
     @include justify-content(center);
     position: relative;
     .title{
-      width: .95rem;
-      height: .3rem;
+      width: .89rem;
+      height: .32rem;
       margin-top: .07rem;
-      line-height: .3rem;
+      line-height: .32rem;
       text-align: center;
       color: #5e300e;
       @include border(1px,#000,solid,0.2rem);
@@ -31,8 +31,8 @@
       @include background-size(60%);
       overflow:hidden;
       padding:.09rem;
-      top: 50%;
-      right: .18rem;
+      top: .24rem;
+      right: .13rem;
       margin-top: -.15rem;
       position: absolute;
     }

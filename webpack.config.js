@@ -18,7 +18,14 @@ module.exports = {
   devServer:{
     contentBase:'./build',//目标目录
     host:'localhost',
-    port:7000
+    port:7000,
+    proxy:{
+      '/con':{
+        target:'https://api.1mxian.com/',
+        changeOrigin:true,
+        pathRewrite:{'^con':''}
+      }
+    }
   },
   //模块
   module:{
@@ -66,7 +73,6 @@ module.exports = {
   plugins:[
     //1:抽离css样式到文件
     new ExtractTextPlugin({
-      filename:'app.css',
       // filename:'[name]_[hash].css',
       filename:'app.css',
       allChunks:true,
