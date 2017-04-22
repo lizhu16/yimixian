@@ -77,7 +77,8 @@ module.exports = {
       template:'./index.ejs',
       filename:'index.html',
       title:'ReactApp'
-    }),
+    })
+    // ,
     //3:压缩代码
     // new webpack.optimize.UglifyJsPlugin({
     //   compress:{
@@ -94,10 +95,10 @@ module.exports = {
     // })
     //,
     // 组件抽离
-    externals: {
-      'react': 'window.React',
-      'react-dom': 'window.ReactDOM',
-      'react-router': 'window.ReactRouter'
-    }
+    // externals: {
+    //   'react': 'window.React',
+    //   'react-dom': 'window.ReactDOM',
+    //   'react-router': 'window.ReactRouter'
+    // }
   ]
 }
