@@ -1,6 +1,7 @@
 import React,{Component} from 'react'
 import Nav from './nav'
 import HomeList from './homeList'
+import Classification from './classification'
 
 class Home extends Component{
   constructor(props){
@@ -19,6 +20,7 @@ class Home extends Component{
         </div>
         <Nav />
         <HomeList />
+        <Classification />
       </section>
     )
   }
