@@ -55,5 +55,23 @@
         }
       }
     }
+    .liangfan{
+      width: 100%;
+      background:#fff;
+      .title{
+        width: 100%;
+        height: .35rem;
+        line-height: .35rem;
+        i{
+          font-size: .13rem;
+          font-weight: normal;
+          padding-left: .13rem;
+        }
+        b{
+          font-size: .10rem;
+          font-weight: normal;
+        }
+      }
+    }
   }
 }
