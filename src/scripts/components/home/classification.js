@@ -1,19 +1,56 @@
 import React,{Component} from 'react'
 
-
 class Classification extends Component{
   render(){
+
+    let domain = 'http:\//7sbnc0.com2.z0.glb.qiniucdn.com/material/'
+    let domainend = '?imageView2/2/w/640'
+    var data = this.props.home_data
+    let list_wrap=[]
+    if(data){
+      let material_data =data[3].material
+      list_wrap=material_data.map((value,index)=>{
+        let Li = value.goods.map((value,index) => (
+          <li key={index} id={value.id}>
+            <dl>
+              <dt>
+                <a href="#javascript">
+                  <img src={domain + value.img + domainend} />
+                </a>
+              </dt>
+              <dd className="pro_name"><h1>{value.name}</h1></dd>
+              <dd className="unit_desc">{value.unit_desc}</dd>
+              <dd className="unit_price">
+                <i>￥</i>{value.unit_price}
+                <b>{value.unit_old_price?`￥${value.unit_old_price}`:''}</b>
+              </dd>
+              <dd className="buy_btn"><a href="#javascript:void(0);">立即购买</a></dd>
+            </dl>
+          </li>
+        ))
+        return <div className="list_wrap" key={index}>
+          <div className="title">
+            <b>{value.name}</b>
+            <a href="#javascript:void(0);">
+              <span>更多商品</span>
+              <i className="yo-ico">&#xf07f;</i>
+            </a>
+          </div>
+          <div className="title_img">
+            <a href="#javascript:void(0);">
+              <img src={domain+value.banners[0].image}/>
+            </a>
+          </div>
+          <ul className="g_list">
+            {Li}
+          </ul>
+        </div>
+      })
+    }
+
     return (
-      <div className="liangfan">
-        <div className="title">
-          <i>量贩装</i>
-          <b>更多商品></b>
-        </div>
-        <div>
-          <a href="#javascript:void(0);">
-            <img src="http://7sbnc0.com2.z0.glb.qiniucdn.com/material/2016/11/21/hdsyliangfanzhuang_48108.png?imageView2/2/w/640"/>
-          </a>
-        </div>
+      <div>
+        {list_wrap}
       </div>
     )
   }
