@@ -7,9 +7,9 @@ var list4 = require('./list4.json')
 module.exports = function(){
   return{
     homePage:homePage,
-	list1:list1,
-	list2:list2,
-	list3:list3,
-	list4:list4
+  	list1:list1,
+  	list2:list2,
+  	list3:list3,
+  	list4:list4
   }
 }
