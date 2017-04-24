@@ -85,7 +85,7 @@
         @include flexbox();
         li{
           @include flex(none);
-          width: 1.55rem;
+          width: 1.35rem;
           padding:0 .05rem;
           dl{
             dt{

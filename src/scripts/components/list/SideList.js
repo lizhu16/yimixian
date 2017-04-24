@@ -14,21 +14,23 @@ class SideList extends Component {
   	getSideList(list){
   		return list.map((value,index)=>{
   			return (
+
 					
-						 <div className="sideitem" id={value.id} key={index}>
-						 	<img src= {`http://7sbnc0.com2.z0.glb.qiniucdn.com/material/`+value.img} />                  
-		                   	<div className="tubiao">
-		                   		<img src={`http://7sbnc0.com2.z0.glb.qiniucdn.com/material/`+value.promotion_img} />
-		                   	</div>
+
+			 <div className="sideitem" key={index}>
+			 	<img src= {`http://7sbnc0.com2.z0.glb.qiniucdn.com/material/`+value.img} />
+             	<div className="tubiao">
+								{value.promotion_img?<img src={`http://7sbnc0.com2.z0.glb.qiniucdn.com/material/`+value.promotion_img} />:''}
+             	</div>
+
 							<div className="good-msg">
 							    <h2>{value.name}</h2>
-							    <span>{value.name}</span>
+							    <p className="subname">{value.sub_name}</p>
 							    <span>{value.unit_desc}</span>
-							    <span>{value.unit_price}</span>
+							    <span><i>￥</i>{value.unit_price}</span>
 							    <a>去团购</a>
-							</div>	
-            			</div>  			 
-				     
+							</div>
+						</div>
   				)
   		})
   	}
@@ -39,13 +41,13 @@ class SideList extends Component {
 		return (
 
 			<div className="sidelist">
-				 {this.getSideList(this.state.sidelist)}
-		    </div>
+				 {this.getSideList(this.props.sidelist)}
+		  </div>
 
 		)
 	}
 
-		
+
 	componentDidMount() {
 	    let domain = 'http://localhost:7001'
 	    fetch(domain + this.props.uri)
@@ -57,6 +59,7 @@ class SideList extends Component {
 		        })
       	})
   	}
+
 }
 
 export default  SideList
