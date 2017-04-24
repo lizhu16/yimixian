@@ -44,7 +44,7 @@ class GoodList extends Component {
 	}
 
 	componentDidMount(){
-
+		console.log(this.state.uri)
 		let domain = 'http://localhost:7001'
 		fetch(domain + this.state.uri)
 			.then((response)=>response.json())

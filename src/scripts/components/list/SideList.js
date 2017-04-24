@@ -47,17 +47,8 @@ class SideList extends Component {
 		)
 	}
 
-
 	componentDidMount() {
-	    let domain = 'http://localhost:7001'
-	    fetch(domain + this.props.uri)
-	      .then((response)=>response.json())
-	      .then((res)=>{
-		        
-		        this.setState({
-					sidelist: res.goods
-		        })
-      	})
+	    
   	}
 
 }
