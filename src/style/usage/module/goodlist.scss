@@ -1,0 +1,99 @@
+@charset "UTF-8" ;
+
+.m-list{
+	height:100%;
+	width:100%;
+
+	.list-head{
+		height:.34rem;
+		margin-top:.45rem;
+		background:#fff19c;
+		text-align: center;
+		line-height: .34rem;
+		color:#5c2a07;
+		font-size:.14rem;
+	}
+	.list-middle{
+		background:#fff;
+		height:100%;
+		@include flexbox() ;
+		@include flex-direction() ;
+		.sidebar{
+        width:25%;
+        background:#efeff4;
+	        .menu{
+	            height:.58rem;
+	            text-align: center;
+	            padding:.1rem 0;
+	            h2{
+	            	font-size:.14rem;
+	            }
+	            p{
+	            	font-size:.12rem;
+	            }
+	        }
+		}
+		.sidelist{
+			
+            width:75%;
+            .sideitem{
+            	width:100%;
+            	height:1.18rem;
+            	position:relative;
+            	border-bottom: 1px solid #fafafa;
+            	img{
+						width:100%;
+						height:100%;
+					}
+					.tubiao{
+						position:absolute;
+						left:0;
+						top:0;
+						height:.32rem;
+						width:.26rem;
+						img{
+							width:100%;
+							height:100%;
+						}
+					}
+            	
+            	.good-msg{
+            		position: absolute;
+            		right:.1rem;
+            		top:.06rem;
+            		text-align: right;
+            		h2{
+            			font-size:.14rem;
+            			line-height:.24rem;
+            		}
+            		span{
+            			display:block;
+            			font-size:.12rem;
+            			color:#828282;
+            		}
+            		span:nth-of-type(3){
+            			color:#f63a0e;
+            			font-size:.12rem;
+            			line-height: .22rem;
+            			font-weight: bold;
+            			em{
+            				font-size:.15rem;
+            			}
+            		}
+            		a{
+            			display: block;
+            			height:.22rem;
+            			width:.6rem;
+            			background:#ffd801;
+            			float:right;
+            			font-size:.12rem;
+            			line-height:.22rem;
+            			text-align: center;
+            			color:#5c2a07;
+            			border-radius: .3rem;
+            		}
+            	}
+            }
+		}
+	}
+}
