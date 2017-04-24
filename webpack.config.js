@@ -21,7 +21,7 @@ module.exports = {
     port:7000,
     proxy:{
       '/con':{
-        target:'https://api.1mxian.com/',
+        target:'https://api.1mxian.com',
         changeOrigin:true,
         pathRewrite:{'^con':''}
       }
