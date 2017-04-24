@@ -2,7 +2,6 @@ import React,{Component} from 'react'
 
 
 
-
 class SideList extends Component {
 
 	constructor(props){
@@ -16,7 +15,7 @@ class SideList extends Component {
   		return list.map((value,index)=>{
   			return (
 					
-						 <div className="sideitem" key={index}>
+						 <div className="sideitem" id={value.id} key={index}>
 						 	<img src= {`http://7sbnc0.com2.z0.glb.qiniucdn.com/material/`+value.img} />                  
 		                   	<div className="tubiao">
 		                   		<img src={`http://7sbnc0.com2.z0.glb.qiniucdn.com/material/`+value.promotion_img} />
@@ -52,7 +51,7 @@ class SideList extends Component {
 	    fetch(domain + this.props.uri)
 	      .then((response)=>response.json())
 	      .then((res)=>{
-		        console.log(res)
+		        
 		        this.setState({
 					sidelist: res.goods
 		        })

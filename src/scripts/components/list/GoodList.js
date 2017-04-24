@@ -19,6 +19,7 @@ class GoodList extends Component {
 		             	<SideBar name="商家发货" detail="单独配送"/>
 		             </div>
 		             <SideList uri="/list2" />
+		             
 	             </div>
              </div>
 			)

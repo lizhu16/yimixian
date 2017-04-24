@@ -5,7 +5,11 @@ class Detail extends Component {
 	render(){
 		return (
             <div className="m-detail">
-				
+				<div className="detail-header">
+					<i></i>
+					<i></i>
+					一米鲜
+				</div>
 				<div className="detail-content">
 					<div className="banner">
 						<ul>
