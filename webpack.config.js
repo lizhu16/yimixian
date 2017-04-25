@@ -19,11 +19,11 @@ module.exports = {
     contentBase:'./build',//目标目录
     host:'localhost',
     port:7000,
-    proxy:{
-      '/con':{
-        target:'https://api.1mxian.com',
-        changeOrigin:true,
-        pathRewrite:{'^con':''}
+    proxy: {
+      '/api': {
+        target: 'https://api.1mxian.com',
+        changeOrigin: true,
+        pathRewrite: {'^/api': ''}
       }
     }
   },

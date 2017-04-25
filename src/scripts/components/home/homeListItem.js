@@ -1,6 +1,4 @@
 import React,{Component} from 'react'
-
-
 class HomeListItem extends Component{
   render(){
     return (

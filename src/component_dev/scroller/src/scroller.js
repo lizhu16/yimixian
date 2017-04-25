@@ -1369,12 +1369,12 @@ export default class Scroller extends Component {
                         <div className="text">下拉可以刷新</div>
                     </div>
                     <div className="yo-loadtip" ref="pullrefresh_release">
-                        <i className="yo-ico">&#xf079;</i>
-                        <div className="text">释放立即更新</div>
+                        <i className="p_refresh"><img src="/images/dropdown_loading_00.png"/></i>
+                        <div className="text">松开刷新</div>
                     </div>
                     <div className="yo-loadtip" ref="pullrefresh_load">
-                        <i className="yo-ico yo-ico-loading">&#xf089;</i>
-                        <div className="text">努力加载中...</div>
+                        <i className="p_refresh"><img src="/images/dropdown_loading_00.png"/></i>
+                        <div className="text">正在加载...</div>
                     </div>
                     <div className="yo-loadtip" ref="pullrefresh_success">
                         <i className="yo-ico yo-ico-succ">&#xf078;</i>
