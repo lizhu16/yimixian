@@ -5,7 +5,7 @@ import Classification from './classification'
 import Nav from './nav'
 import Scroller from '../../../component_dev/scroller/src'
 import {Link} from 'react-router'
-
+import Loading,{loading}from '../../../component_dev/loading/src'
 
 class Home extends Component{
   constructor(props){
@@ -22,6 +22,9 @@ class Home extends Component{
     return !0
   }
 
+  componentWillMount(){
+    loading.show()
+  }
 
   render(){
     if(!this.isEmptyObject(this.state.data)){
@@ -33,7 +36,7 @@ class Home extends Component{
             setTimeout(()=>{
                 this.refs.scroller.stopRefreshing(true); // 这个调用也可以放在异步操作的回调里之后
             },2000)
-            }}
+          }}
         >
           <section>
             <div className="top">
@@ -70,6 +73,7 @@ class Home extends Component{
       this.setState({
         data:res
       })
+      loading.hide()
     })
   }
 
