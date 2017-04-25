@@ -1,8 +1,9 @@
 import React,{Component} from 'react'
+import Scroller from '../../../component_dev/scroller/src'
+import {Link} from 'react-router'
 
 class Classification extends Component{
   render(){
-
     let domain = 'http:\//7sbnc0.com2.z0.glb.qiniucdn.com/material/'
     let domainend = '?imageView2/2/w/640'
     var data = this.props.home_data
@@ -28,23 +29,30 @@ class Classification extends Component{
             </dl>
           </li>
         ))
-        return <div className="list_wrap" key={index}>
-          <div className="title">
-            <b>{value.name}</b>
-            <a href="#javascript:void(0);">
-              <span>更多商品</span>
-              <i className="yo-ico">&#xf07f;</i>
-            </a>
+        return(
+          <div className="list_wrap" key={index}>
+            <div className="title">
+              <b>{value.name}</b>
+              <Link to="/classify">
+                <span>更多商品</span>
+                <i className="yo-ico">&#xf07f;</i>
+              </Link>
+            </div>
+            <div className="title_img">
+              <a href="#javascript:void(0);">
+                <img src={domain+value.banners[0].image}/>
+              </a>
+            </div>
+              <Scroller extraClass={'yo-scroller-b'}
+                scrollX={true}
+                scrollY={false}
+              >
+                <ul className="g_list">
+                  {Li}
+                </ul>
+              </Scroller>
           </div>
-          <div className="title_img">
-            <a href="#javascript:void(0);">
-              <img src={domain+value.banners[0].image}/>
-            </a>
-          </div>
-          <ul className="g_list">
-            {Li}
-          </ul>
-        </div>
+        )
       })
     }
 

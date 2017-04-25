@@ -4,7 +4,8 @@ import ReactDOM from 'react-dom'
 import {Router,Route,hashHistory,IndexRedirect} from 'react-router'
 import Index from './components'
 import Home from './components/home/home'
-import GoodList from './components/list/GoodList'
+import GoodList from './components/classify/GoodList'
+import Detail from './components/detail/Detail'
 
 ReactDOM.render((
   <Router history={hashHistory}>
@@ -12,6 +13,8 @@ ReactDOM.render((
       <IndexRedirect to="/home"/>
       <Router path="home" component={Home}/>
       <Router path="classify" component={GoodList}/>
+    </Route>
+    <Route path="/detail" component={Detail}>
     </Route>
   </Router>
   ),
