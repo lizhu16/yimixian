@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom'
 import {Router,Route,hashHistory,IndexRedirect} from 'react-router'
 import Index from './components'
 import Home from './components/home/home'
-import GoodList from './components/list/GoodList'
+import GoodList from './components/calssify/GoodList'
 
 ReactDOM.render((
   <Router history={hashHistory}>

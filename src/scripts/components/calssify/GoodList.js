@@ -37,7 +37,7 @@ class GoodList extends Component {
            	<SideBar name="量贩装" detail="量贩更实惠" onClickHandle={this.getList.bind(this,"/list3")}/>
            	<SideBar name="商家发货" detail="单独配送" onClickHandle={this.getList.bind(this,"/list4")}/>
            </div>
-         <SideList sidelist={this.state.sidelist} />
+         	<SideList sidelist={this.state.sidelist} />
 	      </div>
     	</div>
 			)
