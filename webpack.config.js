@@ -83,7 +83,7 @@ module.exports = {
       template:'./index.ejs',
       filename:'index.html',
       title:'ReactApp'
-    })
+    }),
     // ,
     //3:压缩代码
     // new webpack.optimize.UglifyJsPlugin({
@@ -106,5 +106,11 @@ module.exports = {
     //   'react-dom': 'window.ReactDOM',
     //   'react-router': 'window.ReactRouter'
     // }
+    // 5: 更改环境变量
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: JSON.stringify('production')
+      }
+    })
   ]
 }
