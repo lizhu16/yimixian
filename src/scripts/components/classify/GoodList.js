@@ -32,10 +32,10 @@ class GoodList extends Component {
 				<div className="list-head">配送至：北京科技职业学院</div>
          <div className="list-middle">
            <div className="sidebar">
-           	<SideBar name="超值团购" detail="更实惠" onClickHandle={this.getList.bind(this,"/list1")}/>
-           	<SideBar name="本周主推" detail="抢到手软" onClickHandle={this.getList.bind(this,"/list2")}/>
-           	<SideBar name="量贩装" detail="量贩更实惠" onClickHandle={this.getList.bind(this,"/list3")}/>
-           	<SideBar name="商家发货" detail="单独配送" onClickHandle={this.getList.bind(this,"/list4")}/>
+           	<SideBar  onClickHandle={this.getList.bind(this,"/list1")}/>
+           	<SideBar  onClickHandle={this.getList.bind(this,"/list2")}/>
+           	<SideBar  onClickHandle={this.getList.bind(this,"/list3")}/>
+           	<SideBar  onClickHandle={this.getList.bind(this,"/list4")}/>
            </div>
          <SideList sidelist={this.state.sidelist} />
 	      </div>
