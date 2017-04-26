@@ -6,16 +6,10 @@ class SideList extends Component {
 
 	constructor(props){
 	    super(props)
-	    this.state = {
-	      sidelist: [{}]
-	    }
   	}
 
   	render(){
-
-		
 			if(this.props.sidelist.length>0){
-
 			return (
 			<div className="sidelist">
 				<List 
