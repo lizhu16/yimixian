@@ -30,13 +30,20 @@
 					overflow: hidden;
 		 			li{
 		 				@include flexbox();
-            			@include flex-direction(column);
-            			img{
+            @include flex-direction(column);
+        	img{
 							height:2.38rem;
 						}
 		 			}
 		 		}
 		 	}
+			.yo-carousel{
+				.index{
+					li{
+						background: #fff;
+					}
+				}
+			}
 		 }
 		 .detail-content{
 		 	.txt-part{

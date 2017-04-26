@@ -37,13 +37,12 @@
 		.sidelist{
             width:75%;
             touch-action:none;
-			height:4.4rem;
             .yo-list li{
             	@include border(0) ;
             	padding:0;
             	height:1.18rem;
             }
-            
+
             .sideitem{
             	width:100%;
             	height:1.18rem;

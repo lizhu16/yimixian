@@ -23,7 +23,9 @@ class Home extends Component{
   }
 
   componentWillMount(){
-    loading.show()
+    loading.show({
+      
+    })
   }
 
   gotoDetail(id) {
@@ -62,13 +64,7 @@ class Home extends Component{
     }
   }
 
-  // componentDidMount(){
-  //   fetch('/con/v5/categories/193/goods?store_id=976&token=b517a94e10a62b65dd2cb58285f3bf5d&delivery_mode=9')
-  //   .then((response)=>response.json())
-  //   .then((res)=>{
-  //     console.log(res);
-  //   })
-  // }
+
 
   componentDidMount(){
     fetch('/api/v5/home_page?token=&longitude=116.25707314855387&latitude=40.12375053421658&poi_id=bd-7ba5590242b2f3103362120c&coord_system=BD-09&delivery_mode=9')

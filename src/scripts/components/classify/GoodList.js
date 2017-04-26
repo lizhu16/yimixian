@@ -16,12 +16,10 @@ class GoodList extends Component {
 
 
 	getListTitle(titId){
-		console.log(titId)
 		let domain = '/api/v5/categories/'
 		fetch(domain + titId + `/goods?store_id=976&token=&delivery_mode=9`)
 			.then((response)=>response.json())
 			.then((res)=>{
-				console.log(res)
 				this.setState({
 						sidelist: res.goods
 				})

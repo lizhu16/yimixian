@@ -72,11 +72,9 @@ class Detail extends Component {
 	}
 
 	componentDidMount(){
-		console.log(this.props.params.id);
 		fetch(`/api/v4/goods/${this.props.params.id}/show?store_id=976&delivery_mode=9`)
 		.then(response=>response.json())
 		.then((res)=>{
-			console.log(res)
 			this.setState({
 				data:res.good_detail.good
 			})

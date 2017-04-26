@@ -1,7 +1,7 @@
 import React,{Component} from 'react'
 
 import List from '../../../component_dev/list/src'
-
+import {Link} from 'react-router'
 class SideList extends Component {
 
 	constructor(props){
@@ -12,12 +12,13 @@ class SideList extends Component {
 			if(this.props.sidelist.length>0){
 			return (
 			<div className="sidelist">
-				<List 
-					
+				<List
+
 					dataSource = {this.props.sidelist}
 					renderItem = {(value,i)=>{
-						
+
 							return (
+							<Link to={`/detail/${value.id}`}>
 							 <div className="sideitem">
 							 	<img className="good-img"src= {`http://7sbnc0.com2.z0.glb.qiniucdn.com/material/`+value.img} />
 				             	<div className="tubiao">
@@ -32,14 +33,14 @@ class SideList extends Component {
 								    <a>去团购</a>
 								</div>
 							</div>
-
+							</Link>
   							);
-						
+
 					}}
 
 				></List>
 		    </div>
-		  
+
 
 		)
 		 }else{
@@ -47,7 +48,7 @@ class SideList extends Component {
 		 }
 	}
 
-	
+
 }
 
 export default  SideList
