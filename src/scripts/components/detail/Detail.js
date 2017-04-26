@@ -2,7 +2,7 @@ import React,{Component} from 'react'
 
 import Lunbo  from './Lunbo'
 
-import Scroller from '../../../Component_dev/scroller/src'
+
 
 class Detail extends Component {
 
@@ -17,7 +17,7 @@ class Detail extends Component {
 					<Lunbo/>
 				</div>
 				<div className="detail-content">
-				    <div className="txt-msg">
+				    <div className="txt-part">
 						<div className="content-t">
 							<span>进口火龙果（中）</span>
 							<span>
@@ -43,7 +43,7 @@ class Detail extends Component {
 							<span>用户评价</span>
 						</div>
 				    </div>
-					<div className="pic-msg">
+					<div className="pic-part">
 						<img src="http://7sbnc0.com2.z0.glb.qiniucdn.com/material/2016/10/20/yuenanbaixinhuolongguo_00_1020.jpg" />
 					</div>
 				</div>

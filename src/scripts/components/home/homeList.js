@@ -20,7 +20,7 @@ class HomeList extends Component{
           disabled={true}
           dataSource={this.props.home_data[2].material}
           renderItem={(value,i)=>{
-            console.log(value);
+
             return (
               <a href="#javascript:void(0);" id={value.id}>
                 <img src={`http:\//7sbnc0.com2.z0.glb.qiniucdn.com/material/${value.image}?imageView2/2/w/640`}/>
