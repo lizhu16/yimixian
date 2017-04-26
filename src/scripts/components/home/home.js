@@ -26,6 +26,10 @@ class Home extends Component{
     loading.show()
   }
 
+  gotoDetail(id) {
+    this.props.router.push(`/detail/${id}`)
+  }
+
   render(){
     if(!this.isEmptyObject(this.state.data)){
       return (
@@ -43,7 +47,7 @@ class Home extends Component{
               <img src="http://7sbnc0.com2.z0.glb.qiniucdn.com/material/2017/4/19/yewushengji_19852.jpeg?imageView2/2/w/640"/>
             </div>
             <Nav home_data={this.state.data.card_list} />
-            <HomeList home_data={this.state.data.card_list} />
+            <HomeList home_data={this.state.data.card_list} onGotoDetail={this.gotoDetail.bind(this)} />
             <Classification home_data={this.state.data.card_list} />
             <div  className="goods_more">
               <Link to="/classify">
