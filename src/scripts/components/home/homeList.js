@@ -19,11 +19,6 @@ class HomeList extends Component{
           disabled={true}
           dataSource={this.props.home_data[2].material}
           renderItem={(value,i)=>{
-<<<<<<< HEAD
-            console.log(value)
-=======
-
->>>>>>> goodlist
             return (
               <Link to={`/detail/${value.id}`} onClick={this.gotoDetail.bind(this,value.id)}>
                 <img src={`http:\//7sbnc0.com2.z0.glb.qiniucdn.com/material/${value.image}?imageView2/2/w/640`}/>
