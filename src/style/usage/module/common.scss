@@ -3,7 +3,14 @@
 #root{
   width:100%;
   height: 100%;
+  touch-action: none;
 }
+
+.yo-scroller {
+  height: 100%;
+  touch-action: none;
+}
+
 .main{
   @include flexbox();
   @include flex-direction(column);
@@ -15,10 +22,10 @@
     @include justify-content(center);
     position: relative;
     .title{
-      width: .95rem;
-      height: .3rem;
+      width: .89rem;
+      height: .32rem;
       margin-top: .07rem;
-      line-height: .3rem;
+      line-height: .32rem;
       text-align: center;
       color: #5e300e;
       @include border(1px,#000,solid,0.2rem);
@@ -31,75 +38,97 @@
       @include background-size(60%);
       overflow:hidden;
       padding:.09rem;
-      top: 50%;
-      right: .18rem;
+      top: .24rem;
+      right: .13rem;
       margin-top: -.15rem;
       position: absolute;
     }
   }
   footer{
-    @include flexbox();
-    height: .5rem;
-    background: #fff;
-    position: relative;
-    div{
       @include flexbox();
-      @include flex-direction(column);
-      @include justify-content(center);
-      text-align: center;
-      i{
-        display: inline-block;
-        width: .21rem;
-        height: .21rem;
-        margin: 0 auto;
-        margin-top:.06rem;
-      }
-      span{
-        display: inline-block;
-        font-size:.1rem;
-      }
-      &.home{
+      height: .5rem;
+      background: #fff;
+      position: relative;
+      a{
+        display: block;
         @include flex();
+        color: #643414;
+        &.active{
+          .home{
+            i{
+              background:url(/images/home_home_icon_p.png)no-repeat;
+              @include background-size(100%);
+            }
+          }
+          .classify{
+            i{
+              background:url(/images/ic_home_kind_p.png)no-repeat;
+              @include background-size(100%);
+            }
+          }
+        }
+      div{
+        @include flexbox();
+        @include flex-direction(column);
+        @include justify-content(center);
+        text-align: center;
         i{
-          background:url(/images/home_home_icon_p.png)no-repeat;
-          @include background-size(100%);
+          display: inline-block;
+          width: .21rem;
+          height: .21rem;
+          margin: 0 auto;
+          margin-top:.06rem;
+        }
+        span{
+          display: inline-block;
+          font-size:.1rem;
+        }
+        &.home{
+          @include flex();
+          width: 100%;
+          i{
+            background:url(/images/home_home_icon.png)no-repeat;
+            @include background-size(100%);
+          }
+        }
+        &.classify{
+          @include flex();
+          width: 100%;
+          i{
+            background:url(/images/ic_home_kind.png)no-repeat;
+            @include background-size(100%);
+          }
+        }
+        &.shopping_car_wrap{
+          width: .55rem;
+          .shopping_car{
+            width: .6rem;
+            height: .6rem;
+            position: absolute;
+            left: 50%;
+            margin-left: -.3rem;
+            bottom:.08rem;
+            background:url(/images/ic_home_cart_p.png)no-repeat;
+            @include background-size(100%);
+          }
+        }
+        &.order{
+          @include flex();
+          width: 100%;
+          i{
+            background:url(/images/home_order_icon.png)no-repeat;
+            @include background-size(100%);
+          }
+        }
+        &.my{
+          @include flex();
+          width: 100%;
+          i{
+            background:url(/images/home_account_icon.png)no-repeat;
+            @include background-size(100%);
+          }
         }
       }
-      &.classify{
-        @include flex();
-        i{
-          background:url(/images/ic_home_kind.png)no-repeat;
-          @include background-size(100%);
-        }
-      }
-      &.shopping_car_wrap{
-        width: .55rem;
-        .shopping_car{
-          width: .6rem;
-          height: .6rem;
-          position: absolute;
-          left: 50%;
-          margin-left: -.3rem;
-          bottom:.08rem;
-          background:url(/images/ic_home_cart_p.png)no-repeat;
-          @include background-size(100%);
-        }
-      }
-      &.order{
-        @include flex();
-        i{
-          background:url(/images/home_order_icon_p.png)no-repeat;
-          @include background-size(100%);
-        }
-      }
-      &.my{
-        @include flex();
-        i{
-          background:url(/images/home_account_icon.png)no-repeat;
-          @include background-size(100%);
-        }
-      }
-
     }
   }
 }

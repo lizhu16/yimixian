@@ -1,0 +1,113 @@
+@charset "UTF-8" ;
+
+.m-list{
+	@include flex();
+	@include flexbox();
+	@include flex-direction(column);
+	width:100%;
+	margin-top:.44rem;
+	.list-head{
+		height:.34rem;
+		background:#fff19c;
+		text-align: center;
+		line-height: .34rem;
+		color:#5c2a07;
+		font-size:.14rem;
+	}
+	.list-middle{
+		@include flexbox() ;
+		@include flex-direction();
+		@include flex();
+		width: 100%;
+		background:#fff;
+		.sidebar{
+        width:23%;
+        background:#efeff4;
+	        .menu{
+	            height:.58rem;
+	            text-align: center;
+	            padding:.1rem 0;
+	            h2{
+	            	font-size:.14rem;
+	            }
+	            p{
+	            	font-size:.12rem;
+	            }
+	        }
+		}
+		.sidelist{
+						overflow-y: scroll;
+            width:75%;
+            .sideitem{
+            	width:100%;
+            	height:1.18rem;
+            	position:relative;
+            	border-bottom: 1px solid #fafafa;
+            	img{
+								width:100%;
+
+							}
+					.tubiao{
+						position:absolute;
+						left:0;
+						top:0;
+						height:.32rem;
+						width:.26rem;
+						img{
+							width:100%;
+
+						}
+					}
+
+            	.good-msg{
+								width: 1.16rem;
+            		position: absolute;
+            		right:.1rem;
+            		top:.06rem;
+            		text-align: right;
+            		h2{
+            			font-size:.14rem;
+            			line-height:.24rem;
+									@include ellipsis(null,1);
+            		}
+								p{
+									font-size:.12rem;
+            			color:#828282;
+									@include ellipsis(null,1);
+									line-height: normal;
+									text-align: right;
+								}
+            		span{
+            			display:block;
+            			font-size:.12rem;
+            			color:#828282;
+            		}
+            		span:nth-of-type(2){
+            			color:#f63a0e;
+            			font-size:15px;
+            			line-height: .22rem;
+            			font-weight: bold;
+									i{
+										font-size: 12px;
+									}
+            			em{
+            				font-size:.15rem;
+            			}
+            		}
+            		a{
+            			display: block;
+            			height:.22rem;
+            			width:.6rem;
+            			background:#ffd801;
+            			float:right;
+            			font-size:.12rem;
+            			line-height:.22rem;
+            			text-align: center;
+            			color:#5c2a07;
+            			border-radius: .3rem;
+            		}
+            	}
+            }
+		}
+	}
+}
