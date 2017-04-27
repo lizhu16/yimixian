@@ -13,6 +13,12 @@
 		line-height: .34rem;
 		color:#5c2a07;
 		font-size:.14rem;
+		
+		img{
+		   width:.16rem;
+		   height:.2rem;
+		   margin-right:.06rem;
+		}
 	}
 	.list-middle{
 		@include flexbox() ;
@@ -22,7 +28,8 @@
 		.sidebar{
         width:23%;
         background:#efeff4;
-	        .menu{
+	        li{
+	            display:block;
 	            height:.58rem;
 	            text-align: center;
 	            padding:.1rem 0;
@@ -33,11 +40,14 @@
 	            	font-size:.12rem;
 	            }
 	        }
+	        .active{
+	       		 background:#fff;
+	       		 border-left:3px solid #ffd801 ;
+	        }
 		}
 		.sidelist{
             width:75%;
             touch-action:none;
-			height:4.4rem;
             .yo-list li{
             	@include border(0) ;
             	padding:0;

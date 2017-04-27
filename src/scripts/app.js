@@ -8,6 +8,8 @@ import GoodList from './components/classify/GoodList'
 import Detail from './components/detail/Detail'
 import Search from './components/search/Search'
 import SearchList from './components/search/SearchList'
+import ShopCar from './components/shopcar/ShopCar'
+
 
 ReactDOM.render((
   <Router history={hashHistory}>
@@ -18,6 +20,7 @@ ReactDOM.render((
     </Route>
     <Route path="/detail" component={Detail}/>
     <Route path="/search" component={Search}/>
+    <Route path="/shopcar" component={ShopCar}/>
     <Route path="/searchList" component={SearchList}/>
   </Router>
   ),
