@@ -17,7 +17,7 @@ class Footer extends Component{
             <span>分类</span>
           </div>
         </Link>
-        <Link to="/classify" >
+        <Link to="/shopcar" >
           <div className="shopping_car_wrap">
             <div className="shopping_car">
             </div>

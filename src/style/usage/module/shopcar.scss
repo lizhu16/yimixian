@@ -22,7 +22,7 @@
 				left:.15rem;
 				top:.2rem;
 			}
-		
+
 	}
 	.car-content{
 		text-align: center;
@@ -43,16 +43,17 @@
 		}
 		.car-btn{
 			width:100%;
-			
-			span{
-				display: inline-block;
-				width:1.5rem;
-				height:.38rem;
-				line-height: .38rem;
-				background:#ffd800;
-				border-radius: 30px;
+			a{
+				span{
+					display: inline-block;
+					width:1.5rem;
+					height:.38rem;
+					line-height: .38rem;
+					background:#ffd800;
+					border-radius: 30px;
+					color:#4b2303;
+				}
 			}
 		}
-		
 	}
 }

@@ -20,7 +20,7 @@ class HomeList extends Component{
           dataSource={this.props.home_data[2].material}
           renderItem={(value,i)=>{
             return (
-              <Link to={`/detail/${value.id}`} onClick={this.gotoDetail.bind(this,value.id)}>
+              <Link onClick={this.gotoDetail.bind(this,value.id)}>
                 <img src={`http:\//7sbnc0.com2.z0.glb.qiniucdn.com/material/${value.image}?imageView2/2/w/640`}/>
               </Link>
             );

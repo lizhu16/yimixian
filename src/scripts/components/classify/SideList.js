@@ -4,7 +4,6 @@ import {Link} from 'react-router'
 
 import List from '../../../component_dev/list/src'
 
-import {Link} from 'react-router'
 class SideList extends Component {
 
 	constructor(props){
