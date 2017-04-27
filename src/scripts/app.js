@@ -18,7 +18,7 @@ ReactDOM.render((
       <Router path="home" component={Home}/>
       <Router path="classify" component={GoodList}/>
     </Route>
-    <Route path="/detail" component={Detail}/>
+    <Route path="/detail/:id" component={Detail}/>
     <Route path="/search" component={Search}/>
     <Route path="/shopcar" component={ShopCar}/>
     <Route path="/searchList" component={SearchList}/>

@@ -15,9 +15,9 @@ class Classification extends Component{
           <li key={index} id={value.id}>
             <dl>
               <dt>
-                <a href="#javascript">
+                <Link to={`/detail/${value.id}`}>
                   <img src={domain + value.img + domainend} />
-                </a>
+                </Link>
               </dt>
               <dd className="pro_name"><h1>{value.name}</h1></dd>
               <dd className="unit_desc">{value.unit_desc}</dd>
