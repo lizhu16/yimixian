@@ -7,7 +7,7 @@ class SearchHeader extends Component{
     return(
       <div className="search_header">
         <i className="goBack"></i>
-        <input type="test" placeholder="输入您想要的水果"/>
+        <input type="test" placeholder="输入您想要的水果" value={this.props.searchKeyWord}/>
       </div>
     )
   }

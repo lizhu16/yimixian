@@ -21,7 +21,7 @@ class SideBar extends Component {
             		   </li>
 	    		})
     }
-  	 
+
 
 	render(){
 		return (
@@ -38,11 +38,11 @@ class SideBar extends Component {
 		fetch('/api/v5/categories?poi_id=bd-9ee392b85e571a41bbbd631f&longitude=116.2560131480521&latitude=40.12207471208547&delivery_mode=9')
 			.then((response)=>response.json())
 			.then((res)=>{
-				
+
 				this.setState({
 					listData:res.categories
 				})
-					
+
 		})
 	}
 
@@ -52,4 +52,3 @@ class SideBar extends Component {
 }
 
 export default  SideBar
-                                                                                                                                                                                                                                                                                                                                                                          

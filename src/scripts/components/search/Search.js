@@ -1,17 +1,28 @@
 import React,{Component} from 'react'
 import SearchHeader from './SearchHeader'
+import {connect} from 'react-redux'
+import store from '../../redux/store'
+
 
 class Search extends Component{
   constructor(props){
     super(props)
     this.state={
-      hot_key_word:[]
+      key_word:[]
     }
+  }
+
+  handleToDetail(value){
+    this.props.onToDetail({
+      type:'SETHOTKEYWORD',
+      hotKeyWord:value
+    })
+    this.props.router.push(`/SearchList`)
   }
 
   getHotWord(list){
     return list.map((value,index)=>{
-              return <a href="#javascript:void(0)" key={index}>{value}</a>
+              return <a  key={index} onClick={this.handleToDetail.bind(this,value)}>{value}</a>
            })
   }
 
@@ -19,10 +30,10 @@ class Search extends Component{
     return(
       <div className="m-search">
         <SearchHeader/>
-        <div className="hot_search">
+        <div className="hot_search" >
           <div className="hot_title"><i></i>热门搜索</div>
           <div className="hot_tag">
-            {this.getHotWord(this.state.hot_key_word)}
+            {this.getHotWord(this.state.key_word)}
           </div>
         </div>
         <div className="history"></div>
@@ -31,14 +42,18 @@ class Search extends Component{
   }
 
   componentDidMount(){
+
     fetch('/api/v5/search/page?store_id=976&token=')
     .then((response)=>response.json())
     .then((res)=>{
       this.setState({
-        hot_key_word:res.hot_key_word
+        key_word:res.hot_key_word
       })
     })
   }
 }
 
-export default Search
+export default connect(
+  store().mapStateToProps,
+  store().mapDispatchToProps
+)(Search)

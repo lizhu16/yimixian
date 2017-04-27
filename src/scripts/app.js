@@ -9,9 +9,11 @@ import Detail from './components/detail/Detail'
 import Search from './components/search/Search'
 import SearchList from './components/search/SearchList'
 import ShopCar from './components/shopcar/ShopCar'
-
+import {Provider} from 'react-redux'
+import store from './redux/store'
 
 ReactDOM.render((
+  <Provider store={store().store}>
   <Router history={hashHistory}>
     <Route path="/" component={Index}>
       <IndexRedirect to="/home"/>
@@ -23,6 +25,7 @@ ReactDOM.render((
     <Route path="/shopcar" component={ShopCar}/>
     <Route path="/searchList" component={SearchList}/>
   </Router>
+</Provider>
   ),
   document.getElementById('root')
 )
