@@ -17,7 +17,7 @@ module.exports = {
   //服务器
   devServer:{
     contentBase:'./build',//目标目录
-    host:'localhost',
+    host:'10.9.157.29',
     port:7000,
     proxy: {
       '/api': {

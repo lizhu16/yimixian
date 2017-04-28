@@ -12,10 +12,9 @@ class SideBar extends Component {
 	  }
 
 
-
     getListContent(list){
 	    return 	list.map((value,index)=>{
-	    		return <li  className={index==this.state.curIndex?'active':''}   onClick={this.props.Handle.bind(this,value.id)}>
+	    		return <li  className={index==this.state.curIndex?'active':''}   onClick={this.props.Handle.bind(this,value.id) }>
 						<h2>{value.name}</h2>
 						<p>{value.sub_name}</p>
             		   </li>

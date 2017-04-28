@@ -37,12 +37,14 @@ class GoodList extends Component {
 		return (
 			<div className="m-list">
 				<div className="list-head"><img src="./images/location.png"/>配送至：北京科技职业学院</div>
-         <div className="list-middle">
-           <SideBar Handle={this.getListTitle.bind(this)} />
-           <SideList sidelist={this.state.sidelist} />
-	      </div>
-    	</div>
+	         <div className="list-middle">
+	           <SideBar Handle={this.getListTitle.bind(this)} />
+	           <SideList sidelist={this.state.sidelist} />
+		      </div>
+	    	</div>
+
 			)
+			
 	}
 
 	componentDidMount(){

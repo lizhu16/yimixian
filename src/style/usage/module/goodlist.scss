@@ -87,15 +87,16 @@
             		h2{
             			font-size:.14rem;
             			line-height:.24rem;
-									@include ellipsis(null,1);
+            			color:#000;
+						@include ellipsis(null,1);
             		}
-								p{
-									font-size:.12rem;
-            			color:#828282;
-									@include ellipsis(null,1);
-									line-height: normal;
-									text-align: right;
-								}
+						p{
+							font-size:.12rem;
+    					    color:#828282;
+							@include ellipsis(null,1);
+							line-height: normal;
+							text-align: right;
+						}
             		span{
             			display:block;
             			font-size:.12rem;
