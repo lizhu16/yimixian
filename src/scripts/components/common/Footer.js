@@ -29,7 +29,7 @@ class Footer extends Component{
             <span>订单</span>
           </div>
         </Link>
-        <Link to="/classify">
+        <Link to="/user">
           <div className="my">
             <i></i>
             <span>我的</span>

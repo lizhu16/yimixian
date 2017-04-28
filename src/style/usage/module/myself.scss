@@ -1,0 +1,87 @@
+@import "../element/yo-badge";
+
+.self{
+  height: 100%;
+  background: #f3f2f7;
+}
+
+.myself {
+  width: 100%;
+  height: 1.87rem;
+  background: url(/images/center_background.png) repeat;
+  background-size: cover;
+  >div:first-child{
+    width: 100%;
+    height: .96rem;
+    padding-top: .11rem;
+    span{
+        height:.74rem;
+        width: .74rem;
+        margin: 0 auto;
+        display: block;
+        background: url(/images/ic_my_head_pic.png) repeat;
+        background-size: cover;
+    }
+  }
+
+  .clickmyself {
+    width: 100%;
+    height: .3rem;
+    span{
+      height: .25rem;
+      width: .85rem;
+      margin: 0 auto;
+      display: block;
+      background: #ffd801;
+      color: #663614;
+      line-height: .25rem;
+      text-align: center;
+      font-size: .13rem;
+      @include border-radius(.2rem);
+    }
+  }
+  >div:last-child{
+    @include flexbox();
+    height: .61rem;
+    width: 100%;
+    span{
+
+        @include flex();
+        padding-top: .15rem;
+        text-align: center;
+        p{
+          text-align: center;
+        }
+    }
+  }
+}
+
+.myselfBox{
+  @include flexbox();
+  width: 100%;
+  height: .93rem;
+  margin-top: .08rem;
+  li{
+    height: 100%;
+    width: .92rem;
+    margin-left: .02rem;
+    background: #fff;
+    display: block;
+    text-align: center;
+
+    img{
+      width: .25rem;
+      height: .25rem;
+      display: block;
+      margin: .2rem .33rem;
+    }
+
+  }
+  li:nth-child(1){
+    margin-left: 0;
+  }
+  li:nth-child(2){
+    margin-right: .01rem;
+  }
+
+}
