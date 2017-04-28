@@ -1,7 +1,6 @@
 import React, {Component} from 'react'
 
-<<<<<<< HEAD
-=======
+
 import Carousel from '../../../component_dev/carousel/src'
 
 class Lunbo extends Component {

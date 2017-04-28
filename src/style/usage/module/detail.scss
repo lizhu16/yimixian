@@ -8,6 +8,46 @@
   $on-index-bgcolor: #000
 ) 
 
+.m-share {
+  .good-share {
+    background: rgba(255,255,255,0.8);
+    .share-box{
+    	position: absolute;
+    	bottom:0;
+    	background: rgba(255,255,255,0.4);
+    	width:100%;
+    	height:1.7rem;
+    	text-align: center;
+    	font-size:.16rem;
+    	padding:.1rem;
+    	.share-pic{
+    		 @include flexbox();
+ 			 @include flex-direction();
+ 			 justify-content: space-around;
+ 			 margin-top:.05rem;
+ 			 span{
+ 			 	display: block;
+ 			 	font-size:.14rem;
+ 			 	line-height:.24rem;
+ 			 }
+    	}
+    	.cancel-btn{
+    		position: absolute;
+    		bottom:0;
+    		height:.5rem;
+    		font-size:.18rem;
+    		line-height: .5rem;
+    		width:100%;
+    		border-top:1px solid #ededed;
+    	}
+    	img{
+    		height:.5rem;
+    		width:.5rem;
+    	}
+    }
+  }	
+}
+
 .m-detail{
 	 @include flexbox();
 	 @include flex-direction(column);
