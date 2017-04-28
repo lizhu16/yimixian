@@ -5,6 +5,8 @@
   @include flex-direction(column);
   .searchListItem{
     @include flex();
+    @include flexbox();
+    @include flex-wrap(wrap);
     background: #fff;
     width: 100%;
     li{

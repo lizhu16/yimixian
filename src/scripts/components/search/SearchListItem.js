@@ -1,5 +1,6 @@
 import React,{Component} from 'react'
 import SearchHeader from './SearchHeader'
+import {Link} from 'react-router'
 
 class SearchListItem extends Component{
 
@@ -7,7 +8,7 @@ class SearchListItem extends Component{
     if(list){
       return  list.map((value,index)=>{
           return <li>
-                  <a href="#javascript:void(0);">
+                  <Link to={`/detail/${value.id}`}>
                     <dl>
                       <dt>
                         <img src={`http:\//7sbnc0.com2.z0.glb.qiniucdn.com/material/${value.img}?imageView2/2/w/640`} />
@@ -22,7 +23,7 @@ class SearchListItem extends Component{
                       </dd>
                       <a href="#javascript:void(0);" className="buy_btn">立即购买</a>
                     </dl>
-                  </a>
+                  </Link>
                 </li>
             })
     }
