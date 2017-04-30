@@ -35,6 +35,7 @@
 	            padding:.1rem 0;
 	            h2{
 	            	font-size:.14rem;
+	            	font-weight:600;
 	            }
 	            p{
 	            	font-size:.12rem;
@@ -86,6 +87,7 @@
             		text-align: right;
             		h2{
             			font-size:.14rem;
+            			font-weight:normal;
             			line-height:.24rem;
             			color:#000;
 						@include ellipsis(null,1);
