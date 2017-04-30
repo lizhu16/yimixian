@@ -10,17 +10,23 @@ class SearchList extends Component{
       searchData:{}
     }
   }
+
+  goBack(){
+    this.props.router.push('/home')
+  }
+
+
   render(){
+
     return(
       <div className="m-searchList">
-        <SearchHeader searchKeyWord={this.props.hotKeyWord} />
+        <SearchHeader searchKeyWord={this.props.hotKeyWord} backHandle={this.goBack.bind(this)} onRouter={this}/>
         <SearchListItem searchData={this.state.searchData} />
       </div>
     )
   }
 
   componentDidMount(){
-    console.log()
     fetch(`/api/v5/search?store_id=976&key_word=${this.props.hotKeyWord}`)
     .then((response)=>response.json())
     .then((res)=>{

@@ -24,6 +24,11 @@ module.exports = {
         target: 'https://api.1mxian.com',
         changeOrigin: true,
         pathRewrite: {'^/api': ''}
+      },
+      '/con': {
+        target: 'http://localhost:3000',
+        changeOrigin: true,
+        pathRewrite: {'^/con': ''}
       }
     }
   },

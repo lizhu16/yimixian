@@ -16,6 +16,7 @@ export default ()=>{
 
 
   let changer = (state={hotKeyWord:''},action)=>{
+
     switch(action.type){
       case 'SETHOTKEYWORD':
       return {

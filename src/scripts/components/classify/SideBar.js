@@ -6,15 +6,14 @@ class SideBar extends Component {
 		    super(props)
 		    this.state = {
 		      categories: '',
-		      listData: [],
-		      curIndex:0
+		      listData: []
 		    }
 	  }
 
 
     getListContent(list){
 	    return 	list.map((value,index)=>{
-	    		return <li  className={index==this.state.curIndex?'active':''}   onClick={this.props.Handle.bind(this,value.id) }>
+	    		return <li  className={index==this.props.activeIndex?'active':''}   onClick={this.props.Handle.bind(this,value.id,index) }>
 						<h2>{value.name}</h2>
 						<p>{value.sub_name}</p>
             		   </li>

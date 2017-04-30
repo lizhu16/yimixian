@@ -17,20 +17,20 @@ import store from './redux/store'
 
 ReactDOM.render((
   <Provider store={store().store}>
-  <Router history={hashHistory}>
-    <Route path="/" component={Index}>
-      <IndexRedirect to="/home"/>
-      <Router path="home" component={Home}/>
-      <Router path="classify" component={GoodList}/>
-    </Route>
-    <Route path="/detail/:id" component={Detail}/>
-    <Route path="/search" component={Search}/>
-    <Route path="/shopcar" component={ShopCar}/>
-    <Route path="/searchList" component={SearchList}/>
-    <Router path="/mylogin" component={MyLogin}/>
-    <Router path="/user" component={User}/>
-  </Router>
-</Provider>
+    <Router history={hashHistory}>
+      <Route path="/" component={Index}>
+        <IndexRedirect to="/home"/>
+        <Router path="home" component={Home}/>
+        <Router path="classify" component={GoodList}/>
+      </Route>
+      <Route path="/detail/:id" component={Detail}/>
+      <Route path="/search" component={Search}/>
+      <Route path="/shopcar" component={ShopCar}/>
+      <Route path="/searchList" component={SearchList}/>
+      <Router path="/mylogin" component={MyLogin}/>
+      <Router path="/user" component={User}/>
+    </Router>
+  </Provider>
   ),
   document.getElementById('root')
 )

@@ -23,13 +23,13 @@ class Footer extends Component{
             </div>
           </div>
         </Link>
-        <Link to="/classify">
+        <Link to="/classify" activeClassName="active">
           <div className="order">
             <i></i>
             <span>订单</span>
           </div>
         </Link>
-        <Link to="/user">
+        <Link to="/user" activeClassName="active">
           <div className="my">
             <i></i>
             <span>我的</span>

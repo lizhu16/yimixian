@@ -10,9 +10,8 @@ class MySelf extends Component {
           <div>
             <span></span>
           </div>
-
           <div className="clickmyself">
-            <span><Link to="/mylogin">点击登录</Link></span>
+            {localStorage.getItem("user")?<span>您好,{localStorage.getItem("user")}</span>:<span><Link to="/mylogin">点击登录</Link></span>}
           </div>
           <div>
             <span><p>0</p>账户余额(元)</span>

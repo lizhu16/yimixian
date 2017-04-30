@@ -11,8 +11,8 @@ class GoodList extends Component {
 		super(props)
 		this.state={
 			titId:"193",
-			sidelist:[]
-
+			sidelist:[],
+			curIndex:0
 		}
 	}
 
@@ -21,13 +21,15 @@ class GoodList extends Component {
   	}
 
 
-	getListTitle(titId){
+	getListTitle(titId,index){
+
 		let domain = '/api/v5/categories/'
 		fetch(domain + titId + `/goods?store_id=976&token=&delivery_mode=9`)
 			.then((response)=>response.json())
 			.then((res)=>{
 				this.setState({
-						sidelist: res.goods
+						sidelist: res.goods,
+						curIndex:index
 				})
 		})
 	}
@@ -38,13 +40,13 @@ class GoodList extends Component {
 			<div className="m-list">
 				<div className="list-head"><img src="./images/location.png"/>配送至：北京科技职业学院</div>
 	         <div className="list-middle">
-	           <SideBar Handle={this.getListTitle.bind(this)} />
+	           <SideBar Handle={this.getListTitle.bind(this)} activeIndex={this.state.curIndex}/>
 	           <SideList sidelist={this.state.sidelist} />
 		      </div>
 	    	</div>
 
 			)
-			
+
 	}
 
 	componentDidMount(){

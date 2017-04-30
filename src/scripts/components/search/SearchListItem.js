@@ -1,12 +1,36 @@
 import React,{Component} from 'react'
 import SearchHeader from './SearchHeader'
 import {Link} from 'react-router'
+import Scroller from '../../../component_dev/scroller/src'
 
 class SearchListItem extends Component{
 
+  isEmptyObject(e) {
+    var t;
+    for (t in e)
+        return !1;
+    return !0
+  }
+
+  tip(data){
+    if(!this.isEmptyObject(data)){
+      if(data.search_result.length > 0){
+        return
+      }else{
+        return <div className="tip"><span>抱歉，暂时没有找到相关商品,来看看大家都在买什么</span></div>
+      }
+    }
+  }
+
   renderList(list){
-    if(list){
-      return  list.map((value,index)=>{
+    let data=[]
+    if(!this.isEmptyObject(list)){
+      if(list.search_result.length>0){
+        data=list.search_result
+      }else{
+        data=list.hot_goods
+      }
+      return  data.map((value,index)=>{
           return <li>
                   <Link to={`/detail/${value.id}`}>
                     <dl>
@@ -32,19 +56,18 @@ class SearchListItem extends Component{
 
   render(){
     return(
-      <ul className="searchListItem">
-        {this.renderList(this.props.searchData.search_result)}
-      </ul>
+      <Scroller>
+        <ul className="searchListItem">
+          {this.tip(this.props.searchData)}
+          {this.renderList(this.props.searchData)}
+        </ul>
+      </Scroller>
     )
   }
 
   componentDidMount(){
 
-    // fetch(`/api/v5/search?store_id=976&token=c1a76970f881f4875d02951c6e61ec8c&key_word=%E8%8B%B9%E6%9E%9C&page=0&delivery_mode=9`)
-    // .then((response)=>response.json())
-    // .then((res)=>{
-    //     console.log(res)
-    // })
+
   }
 }
 

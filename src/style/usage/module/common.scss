@@ -57,8 +57,6 @@
       background: #fff;
       position: fixed;
       bottom: 0;
-      // position: fixed;
-      // bottom: 0;
       width: 100%;
       a{
         display: block;
@@ -74,6 +72,18 @@
           .classify{
             i{
               background:url(/images/ic_home_kind_p.png)no-repeat;
+              @include background-size(100%);
+            }
+          }
+          .order{
+            i{
+              background:url(/images/home_order_icon_p.png)no-repeat;
+              @include background-size(100%);
+            }
+          }
+          .my{
+            i{
+              background:url(/images/home_account_icon_p.png)no-repeat;
               @include background-size(100%);
             }
           }
@@ -165,7 +175,7 @@
     padding-left: .45rem;
     border: 0;
     font-size: .13rem;
-    color:#d3d3d7;
+    color:#000;
     @include border-radius(1rem);
     background:#fff url(/images/icon_search2.png)no-repeat .15rem .075rem;
     @include background-size(.15rem,.15rem);

@@ -8,8 +8,8 @@ class MyLogin extends Component{
     return (
       <div className="main">
 
-        <Login />
-  
+        <Login routerPush={this} />
+
       </div>
     )
   }
