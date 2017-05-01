@@ -4,7 +4,9 @@ export default ()=>{
 
   let mapStateToProps = (state)=>{
     return {
-      hotKeyWord:state.hotKeyWord
+      hotKeyWord:state.hotKeyWord,
+      goodsId:state.goodsId,
+      count:state.count
     }
   }
 
@@ -15,12 +17,25 @@ export default ()=>{
   }
 
 
-  let changer = (state={hotKeyWord:''},action)=>{
-
+  let changer = (state={
+    hotKeyWord:'',
+    goodsId:'',
+    count:0
+  },action)=>{
     switch(action.type){
       case 'SETHOTKEYWORD':
       return {
         hotKeyWord:action.hotKeyWord
+      }
+      case 'addNum':
+      return {
+        count:action.count+1,
+        goodsId:action.goodsId
+      }
+      case 'reduceNum':
+      return {
+        count:action.count-1,
+        goodsId:action.goodsId
       }
       default:
       return state

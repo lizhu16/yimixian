@@ -1,10 +1,15 @@
 @charset "UTF-8" ;
 
+.m-goodlist{
+	height: 100%;
+	padding-bottom: .5rem;
+}
 .m-list{
 	@include flex();
 	@include flexbox();
 	@include flex-direction(column);
 	width:100%;
+	height: 100%;
 	margin-top:.44rem;
 	.list-head{
 		height:.34rem;
@@ -13,7 +18,6 @@
 		line-height: .34rem;
 		color:#5c2a07;
 		font-size:.14rem;
-		
 		img{
 		   width:.16rem;
 		   height:.2rem;
@@ -23,6 +27,8 @@
 	.list-middle{
 		@include flexbox() ;
 		@include flex-direction() ;
+		@include flex();
+		width: 100%;
 		background:#fff;
 		height:100%;
 		.sidebar{
@@ -61,11 +67,11 @@
             	position:relative;
             	background:#fff;
             	padding-top:.15rem;
-            	border-bottom: 1px solid #fafafa;
+            	// border-bottom: 1px solid #fafafa;
             	.good-img{
-						width:100%;
-						height:.94rem;
-					}
+									width:100%;
+									height:.94rem;
+							}
 
 					.tubiao{
 						position:absolute;
@@ -79,7 +85,7 @@
 						}
 					}
 
-            	.good-msg{
+          .good-msg{
 					width: 1.16rem;
             		position: absolute;
             		right:.1rem;

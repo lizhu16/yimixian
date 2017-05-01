@@ -25,6 +25,8 @@
 
 	}
 	.car-content{
+		@include flex();
+		width: 100%;
 		text-align: center;
 		.car-pic{
 			height:1.45rem;

@@ -1,5 +1,5 @@
 import React,{Component} from 'react'
-
+import Header from '../common/Header'
 import SideBar from './SideBar'
 import SideList from './SideList'
 
@@ -35,15 +35,17 @@ class GoodList extends Component {
 	}
 
 	render(){
-
 		return (
-			<div className="m-list">
-				<div className="list-head"><img src="./images/location.png"/>配送至：北京科技职业学院</div>
-	         <div className="list-middle">
-	           <SideBar Handle={this.getListTitle.bind(this)} activeIndex={this.state.curIndex}/>
-	           <SideList sidelist={this.state.sidelist} />
-		      </div>
-	    	</div>
+			<div className="m-goodlist">
+				<Header  extClass="goolistHearder"/>
+				<div className="m-list">
+					<div className="list-head"><img src="./images/location.png"/>配送至：北京科技职业学院</div>
+		         <div className="list-middle">
+		           <SideBar Handle={this.getListTitle.bind(this)} activeIndex={this.state.curIndex}/>
+		           <SideList sidelist={this.state.sidelist} />
+			    </div>
+		    </div>
+			</div>
 
 			)
 

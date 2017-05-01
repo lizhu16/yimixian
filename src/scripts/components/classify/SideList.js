@@ -4,7 +4,7 @@ import List from '../../../component_dev/list/src'
 import {Link} from 'react-router'
 class SideList extends Component {
 
-	constructor(props){
+		constructor(props){
 	    super(props)
   	}
 
@@ -14,10 +14,8 @@ class SideList extends Component {
 			return (
 			<div className="sidelist">
 				<List
-
 					dataSource = {this.props.sidelist}
 					renderItem = {(value,i)=>{
-
 						return (
 						<Link to={`/detail/${value.id}`}  >
 						 <div className="sideitem">
@@ -40,9 +38,6 @@ class SideList extends Component {
 					}}
 
 				usePullRefresh = {true}
-				useLoadMore={true}
-
-
 				></List>
 		    </div>
 
@@ -53,8 +48,6 @@ class SideList extends Component {
 		 }
 
 	}
-
-
 }
 
 export default  SideList

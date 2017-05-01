@@ -4,6 +4,8 @@ import Lunbo  from './Lunbo'
 
 import Loading, {loading} from '../../../component_dev/loading/src'
 
+import {Link} from 'react-router'
+
 import Scroller from '../../../component_dev/scroller/src'
 
 import Modal from '../../../component_dev/modal/src'
@@ -21,23 +23,23 @@ class Detail extends Component {
 	componentWillMount(){
   		loading.show()
   	}
-  	
+
   	back() {
     	this.props.router.goBack()
   	}
-    
+
     showShare() {
 	    this.setState({
 	      modalShow: true
 	    })
-	   
+
 	}
 
 	hideShare() {
 	    this.setState({
 	      modalShow: false
 	    })
-	   
+
 	}
 
 	isEmptyObject(e) {
@@ -47,6 +49,34 @@ class Detail extends Component {
     return !0
   	}
 
+
+		addToCar(id){
+			//获取商品的id
+			if(!localStorage.getItem("goods")){
+				let value=`[{id:${id},num:1}]`
+				localStorage.setItem("goods",value)
+			}else{
+				let has = false //在购物车中没有这个商品
+				let goods = eval(localStorage.getItem("goods"))
+				for(var i = 0;i<goods.length;i++){
+					if(goods[i].id == id){
+						has = true
+						break
+					}
+				}
+
+				if(has){
+					goods[i].num++
+					localStorage.setItem("goods",JSON.stringify(goods))
+				}else{
+					let commodity = {id:id,num:1}
+					goods.push(commodity)
+					localStorage.setItem("goods",JSON.stringify(goods))
+				}
+			}
+
+			console.log(localStorage.getItem("goods"))
+		}
 
 	render(){
 		if(!this.isEmptyObject(this.state.data)){
@@ -98,14 +128,14 @@ class Detail extends Component {
 							<img src={`http://7sbnc0.com2.z0.glb.qiniucdn.com/material/${this.state.data.funtion_imgurl}`} />
 						</div>
 					</div>
-					
+
 					</Scroller>
 				</div>
 				<div className="detail-footer">
-					<div className="shopcar"><a><img src="./images/home_cart.png"/></a></div>
-					<div className="plusin"><a>加入购物车</a></div>
+					<div className="shopcar"><Link to="/hasgood"><img src="./images/home_cart.png"/></Link></div>
+					<div className="plusin" onClick={this.addToCar.bind(this,this.props.params.id)}><a>加入购物车</a></div>
 				</div>
-				
+
 				 <Modal ref="shareto"
 				  show={this.state.modalShow}
 				  width="100%"
@@ -130,7 +160,7 @@ class Detail extends Component {
 						</div>
 			        </div>
 		        </Modal>
-				
+
 			</div>
 			)
 		}else{

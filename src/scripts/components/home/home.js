@@ -4,6 +4,7 @@ import HomeList from './homeList'
 import Classification from './classification'
 import Nav from './nav'
 import Scroller from '../../../component_dev/scroller/src'
+import Header from '../common/Header'
 import {Link} from 'react-router'
 import Loading,{loading}from '../../../component_dev/loading/src'
 
@@ -11,7 +12,8 @@ class Home extends Component{
   constructor(props){
     super(props)
     this.state={
-      data:{}
+      data:{},
+      headerName:"homeHeader"
     }
   }
 
@@ -24,7 +26,7 @@ class Home extends Component{
 
   componentWillMount(){
     loading.show({
-      
+
     })
   }
 
@@ -39,11 +41,12 @@ class Home extends Component{
             ref="scroller"
             usePullRefresh={true}
             onRefresh={() => {
-            setTimeout(()=>{
-                this.refs.scroller.stopRefreshing(true); // 这个调用也可以放在异步操作的回调里之后
-            },2000)
-          }}
+              setTimeout(()=>{
+                  this.refs.scroller.stopRefreshing(true);
+              },2000)
+            }}
         >
+          <Header extClass={this.state.headerName} />
           <section>
             <div className="top">
               <img src="http://7sbnc0.com2.z0.glb.qiniucdn.com/material/2017/4/19/yewushengji_19852.jpeg?imageView2/2/w/640"/>

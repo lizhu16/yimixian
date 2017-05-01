@@ -10,13 +10,6 @@ body{
 }
 .main{
   padding-bottom: .5rem;
-  header{
-    position: absolute;
-    top: 0;
-    width: 100%;
-    opacity: .3;
-    z-index: 100;
-  }
   .yo-scroller-a{
     @include flex();
     width: 100%;

@@ -2,7 +2,7 @@
 
 .self{
   height: 100%;
-  background: #f3f2f7;
+  background: #fafafa;
 }
 
 .myself {
@@ -38,6 +38,9 @@
       text-align: center;
       font-size: .13rem;
       @include border-radius(.2rem);
+      a{
+        color:#643414;
+      }
     }
   }
   >div:last-child{

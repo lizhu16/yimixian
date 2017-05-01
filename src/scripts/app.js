@@ -9,6 +9,7 @@ import Detail from './components/detail/Detail'
 import Search from './components/search/Search'
 import MySelf from './components/login/MySelf'
 import SearchList from './components/search/SearchList'
+import Order from './components/order/order'
 import ShopCar from './components/shopcar/ShopCar'
 import HasGood from './components/hasgood/HasGood'
 import MyLogin from './components/MyLogin'
@@ -23,6 +24,7 @@ ReactDOM.render((
       <IndexRedirect to="/home"/>
       <Router path="home" component={Home}/>
       <Router path="classify" component={GoodList}/>
+      <Route path="/order" component={Order}/>
     </Route>
     <Route path="/detail/:id" component={Detail}/>
     <Route path="/search" component={Search}/>

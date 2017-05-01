@@ -15,7 +15,6 @@ class SearchList extends Component{
     this.props.router.push('/home')
   }
 
-
   render(){
 
     return(
