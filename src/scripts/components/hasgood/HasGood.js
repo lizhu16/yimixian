@@ -13,7 +13,7 @@ class HasGood extends Component{
     }
   }
 
-  addNum(id,num){
+  addNum(id){
     this.props.onToDetail({
       type:"addNum",
       count:this.props.count,
@@ -22,7 +22,13 @@ class HasGood extends Component{
   }
 
   reduceNum(id){
-
+    if(this.props.count > 1){
+      this.props.onToDetail({
+        type:"reduceNum",
+        count:this.props.count,
+        goodsId:id
+      })
+    }
   }
 
   showNum(index){
@@ -62,7 +68,7 @@ class HasGood extends Component{
                 <p>
                   <span className="goods-name">{value.name}</span>
                   <span className="goods-unit_desc">{value.unit_desc}</span>
-                  <span>￥<i className="goods-unit_price">{parseInt(value.unit_price)}</i></span>
+                  <span>￥<i className="goods-unit_price">{Math.round(parseInt(value.unit_price*100))/100}</i></span>
                 </p>
                 <div className="plus-minus">
                    <img src="images/icon_minus.png" onClick={this.reduceNum.bind(this,value.id)}/>
